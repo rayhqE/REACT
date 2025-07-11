@@ -5,7 +5,7 @@ import "./App.css";
 import Container from "./components/Container";
 
 function App() {
-  let foodItems = ["dal", "Green Vegies", "Roti", "Mutton", "Chicken"];
+  let foodItems = ["Dal", "Green Vegies", "Roti", "Mutton", "Chicken"];
   return (
     <>
       <Container>
