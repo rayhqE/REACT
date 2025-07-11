@@ -7,11 +7,17 @@ import Container from "./components/Container";
 function App() {
   let foodItems = ["dal", "Green Vegies", "Roti", "Mutton", "Chicken"];
   return (
-    <Container>
-      <h1 className="food-heading">Healthy Foods</h1>
-      <ErrorMessage items={foodItems}></ErrorMessage>
-      <FoodItem items={foodItems}></FoodItem>
-    </Container>
+    <>
+      <Container>
+        <h1 className="food-heading">Healthy Foods</h1>
+        <ErrorMessage items={foodItems}></ErrorMessage>
+        <FoodItem items={foodItems}></FoodItem>
+      </Container>
+
+      <Container>
+        <p>Above is the list of Healthy Foods</p>
+      </Container>
+    </>
   );
 }
 
