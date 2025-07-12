@@ -3,7 +3,11 @@ function FoodItem({ items }) {
   return (
     <ul className="list-group">
       {items.map((items) => (
-        <Item key={items} foodItems={items}></Item>
+        <Item
+          key={items}
+          foodItems={items}
+          handleBuyButton={() => console.log(`${items} being bought`)}
+        ></Item>
       ))}
     </ul>
   );
