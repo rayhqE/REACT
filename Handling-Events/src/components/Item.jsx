@@ -2,7 +2,7 @@ import styles from "./Item.module.css";
 
 function Item({ foodItems }) {
   function onClickCheck(event) {
-    console.log(event);
+    // console.log(event);
 
     console.log(`${foodItems} being bought`);
   }
