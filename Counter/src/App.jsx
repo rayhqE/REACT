@@ -9,10 +9,16 @@ function App() {
   // let Counter = 5;
 
   const addValue = () => {
-    setCounter(Counter + 1);
+    if (Counter < 20) {
+      Counter = Counter + 1;
+    }
+    setCounter(Counter);
   };
   const removevalue = () => {
-    setCounter(Counter - 1);
+    if (Counter > 0) {
+      Counter = Counter - 1;
+    }
+    setCounter(Counter);
   };
 
   return (
