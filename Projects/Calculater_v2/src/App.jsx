@@ -2,13 +2,26 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./App.module.css";
 import Display from "./components/Display";
 import ButtonsContainer from "./components/ButtonsContainer";
+import { useState } from "react";
 
 function App() {
+  const [calVal, setCalVal] = useState("");
+  const onButtonClick = (buttonText) => {
+    if (buttonText === "C") {
+      setCalVal("");
+    } else if (buttonText === "=") {
+      
+    } else {
+      const newDisplayVal = calVal + buttonText;
+      setCalVal(newDisplayVal);
+    }
+  };
+
   return (
     <center className="mt-5">
       <div className={styles.calculater}>
-        <Display></Display>
-        <ButtonsContainer></ButtonsContainer>
+        <Display displayValue={calVal}></Display>
+        <ButtonsContainer onButtonClick={onButtonClick}></ButtonsContainer>
       </div>
     </center>
   );
